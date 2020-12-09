@@ -1,6 +1,5 @@
 package dispatchApp;
 
-
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -18,7 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		//在内存中看有没有能匹配的用户，有的话负值为admin
-		auth.inMemoryAuthentication().withUser("zhangxueqian96@gmail.com").password("123").authorities("ROLE_ADMIN");
+		auth.inMemoryAuthentication().withUser("xxxxxx@gmail.com").password("123").authorities("ROLE_ADMIN");
 
 		// inmeory没找到回去数据库找， get user user name & authentication
 		auth.jdbcAuthentication().dataSource(dataSource)
